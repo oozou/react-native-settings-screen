@@ -1,0 +1,3 @@
+rootProject.name = 'SettingsScreen'
+
+include ':app'
