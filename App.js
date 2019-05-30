@@ -8,6 +8,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
+import { SettingsScreen } from './src/app';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -16,26 +17,18 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-/*
-navigation title
-
-section cell
-items cell
-  - (icon)   disclosure
-  - (icon)   disclosure with text
-  - (icon)   switch
-  - (avatar) profile (avatar, title, subtitle, disclosure)
-*/
-
 type Props = {};
 export default class App extends Component<Props> {
+
+  _handlePress = () => {
+    alert('alert from parent');
+  }
+  
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Yo123! Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
+        <SettingsScreen
+        onPress={this._handlePress}>
+        </SettingsScreen>
     );
   }
 }
