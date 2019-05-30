@@ -37,14 +37,14 @@ export const itemStyles = StyleSheet.create({
         marginTop: -6,
         marginLeft: 0,
         color: 'black',
-        fontFamily: 'Verdana',
+        fontFamily: 'SFProDisplay-Regular',
         fontSize: 22,
     },
     accountSubtitle: {
         marginTop: 5,
         marginLeft: 0,
         color: 'black',
-        fontFamily: 'Verdana',
+        fontFamily: 'SFProText-Regular',
         fontSize: 13,
     },
     title: {
