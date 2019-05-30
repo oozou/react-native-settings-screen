@@ -6,7 +6,6 @@ export default class SpaceItem extends Component {
     render () {
         return (
             <View style={{height: this.props.item.height, backgroundColor: GlobalStyle.colors.emptySpace}}>
-                <Text>space height = {this.props.item.height}</Text>
             </View>
         )
     }

@@ -23,7 +23,6 @@ export default class NavBarTitle extends Component {
                         <Text style={styles.header}>{GlobalVars.text.header}</Text>
                     </View>
                 </View>
-                <SeparatorLine />
             </View>
         )
     }

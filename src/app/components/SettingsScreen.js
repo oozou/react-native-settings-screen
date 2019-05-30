@@ -51,6 +51,21 @@ export default class SettingsScreen extends Component {
         ]
     }
 
+    renderItem = (item) => {
+        switch (item.type) {
+            case 'space':
+                return (
+                    <View>
+                    <SeparatorLine />
+                    <SettingsItemContainer item={item}/>
+                    <SeparatorLine />
+                    </View>
+                )
+            default:
+                return <SettingsItemContainer item={item}/>
+        }
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -58,9 +73,7 @@ export default class SettingsScreen extends Component {
                 <FlatList
                 data={this.state.items}
                 showsVerticalScrollIndicator={true}
-                renderItem={({item}) => 
-                    <SettingsItemContainer item={item}/>
-                }
+                renderItem={(item) => this.renderItem(item.item)}
                 keyExtractor={(item, index) => index.toString()}
                 />
             </View>
