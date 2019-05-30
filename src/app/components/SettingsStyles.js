@@ -41,7 +41,6 @@ export const GlobalStyle = {
         separator: '#C7C7CB',
         headerBg: '#F5F5F7',
         labelBg: 'red',
-        space: 'yellow',
         title: '#010000',
         subtitle: '#010000',
         disclosureText: '#8E8E92'
@@ -91,13 +90,14 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
-        marginTop: 50,
+        marginTop: 0,
         justifyContent: 'center',
         alignItems: 'stretch',
         backgroundColor: GlobalStyle.colors.containerBackground,
     },
     navBar: {
         height: 84,
+        marginTop: 60,
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: GlobalStyle.colors.headerBg,

@@ -1,29 +1,29 @@
 import React, { Component } from 'react';
 import { View, Text, FlatList } from 'react-native';
-import { itemStyles, styles } from './SettingsStyles';
+import { itemStyles, styles, GlobalStyle } from './SettingsStyles';
 import { SpaceItem, AccountItem, DisclosureItem, SwitchItem } from './items';
-import NavBarTitle from './NavBarTitle';
+import NavBarTitle, { SeparatorLine } from './NavBarTitle';
 
 class SettingsItemContainer extends Component {
 
     renderItem(item) {
         switch (item.type) {
             case 'account':
-                return <AccountItem item={item} />
+                return <AccountItem style={itemStyles.itemContainer} item={item} />
             case 'switch':
-                return <SwitchItem item={item} />
+                return <SwitchItem style={itemStyles.itemContainer} item={item} />
             case 'disclosure':  
-                return <DisclosureItem item={item} />
+                return <DisclosureItem style={itemStyles.itemContainer} item={item} />
             case 'space':
-                return <SpaceItem style={{height: 150}} item={item} />
+                return <SpaceItem style={itemStyles.itemContainer} item={item}/>
             default:
                 return <Text>Unexpected item type</Text>
         }
     }
 
-    render() {
+    render()  {
         return (
-            <View style={itemStyles.itemContainer}>
+            <View>
                 {this.renderItem(this.props.item)}
             </View>
         );
