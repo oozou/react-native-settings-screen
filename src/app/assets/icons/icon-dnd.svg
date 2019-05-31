@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="30px" viewBox="0 0 29 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Do not  Disturb</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#5856D6" offset="0%"></stop>
+            <stop stop-color="#5856D6" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="iPhone-XS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Settings" transform="translate(-16.000000, -642.000000)">
+            <g id="Section-#2" transform="translate(0.000000, 547.000000)">
+                <g id="Row" transform="translate(0.000000, 88.000000)">
+                    <g id="Option" transform="translate(16.000000, 7.000000)">
+                        <g id="Graphics-/-Custom-Icons-/-Settings-/-Do-not--Disturb" transform="translate(0.000000, 0.500000)">
+                            <g id="Do-not--Disturb">
+                                <rect id="Shape" fill="url(#linearGradient-1)" x="0" y="0" width="29" height="29" rx="6"></rect>
+                                <path d="M22.6174455,16.2790287 C21.6035404,19.3784866 18.6882387,21.6174455 15.25,21.6174455 C10.9697932,21.6174455 7.5,18.1476523 7.5,13.8674455 C7.5,10.4292069 9.73895889,7.51390506 12.8384168,6.5 C11.9966493,7.65546252 11.5,9.07845468 11.5,10.6174455 C11.5,14.4834388 14.6340068,17.6174455 18.5,17.6174455 C20.0389908,17.6174455 21.461983,17.1207962 22.6174455,16.2790287 L22.6174455,16.2790287 Z" id="Icon" fill="#FFFFFF"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

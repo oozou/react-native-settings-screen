@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="30px" viewBox="0 0 29 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Graphics / Custom Icons / Settings / Hotspot</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#4CD964" offset="0%"></stop>
+            <stop stop-color="#4CD964" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="iPhone-XS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Settings" transform="translate(-16.000000, -474.000000)">
+            <g id="Section-#1" transform="translate(0.000000, 290.000000)">
+                <g id="Row" transform="translate(0.000000, 177.000000)">
+                    <g id="Option" transform="translate(16.000000, 7.000000)">
+                        <g id="Graphics-/-Custom-Icons-/-Settings-/-Hotspot" transform="translate(0.000000, 0.500000)">
+                            <g id="Icon">
+                                <rect id="Shape" fill="url(#linearGradient-1)" x="0" y="0" width="29" height="29" rx="6"></rect>
+                                <path d="M7.768,16.5 C7.768,16.552 7.774,16.602 7.775,16.654 C6.148,15.975 5,14.37 5,12.5 C5,10.019 7.019,8 9.5,8 L14.5,8 C16.982,8 19,10.019 19,12.5 C19,14.981 16.982,17 14.5,17 L12,17 L12,15.5 L14.5,15.5 C16.155,15.5 17.5,14.154 17.5,12.5 C17.5,10.846 16.155,9.5 14.5,9.5 L9.5,9.5 C7.846,9.5 6.5,10.846 6.5,12.5 C6.5,13.585 7.084,14.528 7.949,15.055 C7.834,15.516 7.768,15.999 7.768,16.5 Z M20.2254,12.3465 C21.8524,13.0245 23.0004,14.6295 23.0004,16.5005 C23.0004,18.9815 20.9814,21.0005 18.5004,21.0005 L13.5004,21.0005 C11.0184,21.0005 9.0004,18.9815 9.0004,16.5005 C9.0004,14.0185 11.0184,12.0005 13.5004,12.0005 L16.0004,12.0005 L16.0004,13.5005 L13.5004,13.5005 C11.8454,13.5005 10.5004,14.8455 10.5004,16.5005 C10.5004,18.1545 11.8454,19.5005 13.5004,19.5005 L18.5004,19.5005 C20.1544,19.5005 21.5004,18.1545 21.5004,16.5005 C21.5004,15.4155 20.9164,14.4725 20.0514,13.9455 C20.1664,13.4845 20.2324,13.0015 20.2324,12.5005 C20.2324,12.4485 20.2264,12.3975 20.2254,12.3465 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

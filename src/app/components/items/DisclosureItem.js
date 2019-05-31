@@ -12,7 +12,7 @@ export default class DisclosureItem extends Component {
             leftElement={
                 <View style={{borderRadius:10, backgroundColor: 'green'}}>
                 <Image
-                source={require('../../assets/icons/icon_airplane_mode.svg')}
+                source={this.props.item.icon}
                 style={{width: 29, height: 29, resizeMode: 'cover'}}
                 />
                 </View>

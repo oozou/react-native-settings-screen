@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="30px" viewBox="0 0 29 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Graphics / Custom Icons / Settings / Wifi</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#007AFF" offset="0%"></stop>
+            <stop stop-color="#007AFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="iPhone-XS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Settings" transform="translate(-16.000000, -342.000000)">
+            <g id="Section-#1" transform="translate(0.000000, 290.000000)">
+                <g id="Row" transform="translate(0.000000, 45.000000)">
+                    <g id="Option" transform="translate(16.000000, 7.000000)">
+                        <g id="Graphics-/-Custom-Icons-/-Settings-/-Wifi" transform="translate(0.000000, 0.500000)">
+                            <g id="Wifi-Icon-">
+                                <rect id="Shape" fill="url(#linearGradient-1)" x="0" y="0" width="29" height="29" rx="6"></rect>
+                                <path d="M14.4940994,11.1123288 C17.188228,11.1123288 19.6435573,12.1047945 21.5261846,13.7321918 L22.8333333,12.2890411 C20.6036139,10.3534247 17.6915115,9 14.4940994,9 C11.3015466,9 8.39360934,10.3493151 6.16666667,12.2787671 L7.47103864,13.7239726 C9.35227762,12.1013699 11.8034418,11.1123288 14.4940994,11.1123288 L14.4940994,11.1123288 Z M14.4940994,15.2780822 C16.1087717,15.2780822 17.583913,15.8643836 18.7216808,16.830137 L20.1044955,15.3027397 C18.5995044,14.0109589 16.6419051,13.1671233 14.4940994,13.1671233 C12.3504589,13.1671233 10.394248,14.0089041 8.89064517,15.2965753 L10.2713774,16.8260274 C11.408451,15.8623288 12.8815097,15.2780822 14.4940994,15.2780822 L14.4940994,15.2780822 Z M17.3381718,18.3575342 C16.5683216,17.7184932 15.5770267,17.2760274 14.4934053,17.2760274 C13.4118664,17.2760274 12.4219598,17.7178082 11.6521096,18.3541096 L14.4934053,21.5 L17.3381718,18.3575342 L17.3381718,18.3575342 Z" id="Wifi" fill="#FFFFFF"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

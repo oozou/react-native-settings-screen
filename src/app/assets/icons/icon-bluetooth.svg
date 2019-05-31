@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="30px" viewBox="0 0 29 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Graphics / Custom Icons / Settings / Bluetooth</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#007AFF" offset="0%"></stop>
+            <stop stop-color="#007AFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="iPhone-XS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Settings" transform="translate(-16.000000, -386.000000)">
+            <g id="Section-#1" transform="translate(0.000000, 290.000000)">
+                <g id="Row" transform="translate(0.000000, 89.000000)">
+                    <g id="Option" transform="translate(16.000000, 7.000000)">
+                        <g id="Graphics-/-Custom-Icons-/-Settings-/-Bluetooth" transform="translate(0.000000, 0.500000)">
+                            <g id="Bluetooth-Icon">
+                                <rect id="Shape" fill="url(#linearGradient-1)" x="0" y="0" width="29" height="29" rx="6"></rect>
+                                <path d="M18.8680508,18.75 L19.5030696,19.3117474 L19.5030696,18.1882526 L18.8680508,18.75 Z M14.25,22.8351988 L13.0030696,23.9382526 L14.25,24.5 L14.25,22.8351988 Z M14.25,15.0767421 L14.25,14.9114603 L10.0540671,18.9460111 L9.56014971,18.4141736 L9.5218991,19.4577111 L9.50398235,19.4749388 L10.5733739,19.5051874 L10.0702066,18.9633897 L14.25,15.0767421 Z M14.4770296,14.8656351 L14.5081163,14.8367285 L14.9801685,15.2906248 L15.5,14.75 L14.9801685,14.2093752 L14.4931929,14.6776209 L14.4624815,14.6472344 L14.383607,14.717008 L14.4179187,14.75 L14.383607,14.782992 L14.4770296,14.8656351 Z M14.25,14.4370009 L10.0702782,10.3014991 L10.454336,9.91353936 L9.68772378,9.922992 L9.53699478,9.77385766 L9.5377778,9.92484089 L9.40150076,9.92652124 L9.53846953,10.058222 L9.54249613,10.8346434 L9.93431555,10.4388432 L14.25,14.5885397 L14.25,14.4370009 Z M14.25,6.66480125 L14.25,5 L13.0030696,5.56174742 L14.25,6.66480125 Z M18.8680508,10.75 L19.5030696,11.3117474 L19.5030696,10.1882526 L18.8680508,10.75 Z" id="Icon" stroke="#FFFFFF" stroke-width="1.5"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
