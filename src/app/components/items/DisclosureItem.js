@@ -5,6 +5,8 @@ import { Avatar, ListItem, Icon } from 'react-native-elements';
 
 export default class DisclosureItem extends Component {
     render() {
+        const rightText = this.props.item.rightText ? this.props.item.rightText : "";
+        const showRightText = rightText.length > 0;
         return (
             <ListItem
             leftElement={
@@ -19,6 +21,11 @@ export default class DisclosureItem extends Component {
                 <Text style={itemStyles.title}>{this.props.item.title}</Text>
             }
             rightElement={
+                <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                    {showRightText
+                        ? <Text>{rightText}</Text>
+                        : null
+                    }
                 <Icon
                 containerStyle={{
                     marginRight: -10,
@@ -26,6 +33,7 @@ export default class DisclosureItem extends Component {
                 name='chevron-right'
                 type='feather'
                 color={GlobalStyle.colors.separator} />
+                </View>
             }
             />
         )
