@@ -23,7 +23,7 @@ export default class DisclosureItem extends Component {
             rightElement={
                 <View style={{flexDirection: 'row', alignItems: 'center'}}>
                     {showRightText
-                        ? <Text>{rightText}</Text>
+                        ? <Text style={itemStyles.disclosureText}>{rightText}</Text>
                         : null
                     }
                 <Icon

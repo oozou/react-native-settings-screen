@@ -60,10 +60,10 @@ export const itemStyles = StyleSheet.create({
         fontSize: 16,
     },
     disclosureText: {
-        marginLeft: GlobalStyle.itemMarginLeft,
-        color: 'red',
-        fontFamily: 'Verdana',
-        fontSize: 50,
+        marginLeft: 0,
+        color: 'rgba(0, 0, 0, 0.4)',
+        fontFamily: 'SFProText-Regular',
+        fontSize: 17,
     },
 });
 
