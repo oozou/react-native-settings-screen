@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="30px" viewBox="0 0 29 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="iPhone-XS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Settings" transform="translate(-16.000000, -298.000000)">
+            <g id="Section-#1" transform="translate(0.000000, 290.000000)">
+                <g id="Row">
+                    <g id="Option" transform="translate(16.000000, 8.000000)">
+                        <g id="Graphics-/-Custom-Icons-/-Settings-/-Airplane" transform="translate(0.000000, 0.500000)">
+                            <g id="Airplane-Icon">
+                                <rect id="Shape" fill="#FF9500" x="0" y="0" width="29" height="29" rx="6"></rect>
+                                <path d="M12.9419402,15.9776001 L9.41455157,22.9608765 L10.9619141,22.9608765 L16.9457226,15.9776001 L22.9433664,15.9776001 C23.7732728,15.9776001 24.4460449,15.3043415 24.4460449,14.4776001 C24.4460449,13.649173 23.7742579,12.9776001 22.9472002,12.9776001 L16.9503784,12.9776001 L10.9609592,6 L9.46502686,6 L12.9559326,12.9644165 L8.26470588,12.9776001 L6,10.2276001 L6,18.7276001 L8.26470588,15.9776001 L12.9419402,15.9776001 Z" id="Icon" fill="#FFFFFF"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

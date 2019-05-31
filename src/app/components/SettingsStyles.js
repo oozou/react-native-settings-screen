@@ -48,10 +48,10 @@ export const itemStyles = StyleSheet.create({
         fontSize: 13,
     },
     title: {
-        marginLeft: GlobalStyle.itemMarginLeft,
-        color: 'green',
-        fontFamily: 'Verdana',
-        fontSize: 22,
+        marginLeft: 0,
+        color: 'black',
+        fontFamily: 'SFProText-Regular',
+        fontSize: 17,
     },
     subtitle: {
         marginLeft: GlobalStyle.itemMarginLeft,
