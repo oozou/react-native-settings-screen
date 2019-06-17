@@ -12,11 +12,11 @@ export const GlobalStyle = {
     },
     itemMarginLeft: 15,
     colors: {
+        white: 'white',
         containerBackground: '#F5F5F7',
         emptySpace: '#EEEFF3',
         separator: '#C7C7CB',
         headerBg: '#F5F5F7',
-        labelBg: 'red',
         title: '#010000',
         subtitle: '#010000',
         disclosureText: '#8E8E92'

@@ -11,7 +11,7 @@ export default class SwitchItem extends Component {
         return (
             <ListItem
             leftElement={
-                <View style={{borderRadius:10, backgroundColor: 'green'}}>
+                <View style={{borderRadius:10, backgroundColor: GlobalStyle.colors.separator}}>
                 <Image
                 source={this.props.item.icon}
                 style={{width: 29, height: 29, resizeMode: 'cover'}}

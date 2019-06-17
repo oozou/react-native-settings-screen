@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image, ActiivityIndicator } from 'react-native';
+import { Text } from 'react-native';
 import { itemStyles, GlobalStyle } from '../SettingsStyles';
 import { Avatar, ListItem, Icon } from 'react-native-elements';
 

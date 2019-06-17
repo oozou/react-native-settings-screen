@@ -4,12 +4,16 @@ import { styles, GlobalVars, GlobalStyle } from './SettingsStyles';
 
 export class SeparatorLine extends Component {
     render() {
-        const isIcon = this.props.isIcon ? this.props.isIcon : false;
-        const margin = isIcon ? 50 : 0;
+        var margin = 0;
+        if (this.props.item) {
+            if (this.props.item.isIcon) {
+                margin = 50;
+            }
+        }
         return (
             <View
             style={{borderBottomColor: GlobalStyle.colors.separator,
-                    borderBottomWidth: 1,
+                    borderBottomWidth: 0.5,
                     marginLeft: margin,
                     alignSelf: 'stretch'}}
             />
