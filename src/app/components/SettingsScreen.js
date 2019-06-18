@@ -18,19 +18,17 @@ class SettingsItemContainer extends Component {
                 return <SpaceItem style={itemStyles.itemContainer} item={item}/>
             case 'separator':
                 return <SeparatorLine item={item} />
+            case 'separator-interitem':
+                return <SeparatorLine margin={50} />
             default:
                 return <Text>Unexpected item type</Text>
         }
     }
 
     render()  {
-        const separators = this.props.item.separator ?? [];
         return (
             <View>
-                {separators.includes('top') ? <SeparatorLine /> : null}
                 {this.renderItem(this.props.item)}
-                {separators.includes('interitem') ? <SeparatorLine margin={50}/> : null}
-                {separators.includes('bottom') ? <SeparatorLine/> : null}
             </View>
         );
     }
@@ -43,20 +41,22 @@ export default class SettingsScreen extends Component {
         this.toggleAirplaneMode = this.toggleAirplaneMode.bind(this);
         this.state = {
             items: [
-                {type: 'space', height: 35, isTop: false},
-                {type: 'account', height: 80, title: 'Stanislau Baranouski', subtitle: 'Apple ID, iCloud, iTunes & App Store', avatarUrl: 'https://i.ibb.co/SwdrRjG/Screen-Shot-2019-05-30-at-16-59-01.png', separator:['top', 'bottom']},
-                {type: 'space', height: 36},
-                {type: 'switch', title:'Airplane Mode', isOn:false, toggleHandler:(this.toggleAirplaneMode), icon: require('../assets/icons/icon-airplane-mode.svg'), separator:['top', 'interitem']},
-                {type: 'disclosure', title:'Wi-Fi', rightText: 'Oozou', icon: require('../assets/icons/icon-wifi.svg'), separator:['interitem']},
-                {type: 'disclosure', title:'Bluetooth', rightText: 'On', icon: require('../assets/icons/icon-bluetooth.png'), separator:['interitem']},
-                {type: 'disclosure', title: 'Mobile Data', icon: require('../assets/icons/icon-mobiledata.svg'), separator:['interitem']},
-                {type: 'disclosure', title: 'Personal Hotspot', rightText: 'Off', icon: require('../assets/icons/icon-hotspot.svg'), separator:['interitem']},
-                {type: 'disclosure', title: 'VPN', rightText: 'Not Connected', icon: require('../assets/icons/icon-vpn.svg'), separator:['bottom']},
-                {type: 'space', height: 35},
-                {type: 'disclosure', title: 'Notifications', icon: require('../assets/icons/icon-notifications.svg'), separator:['top', 'interitem']},
-                {type: 'disclosure', title: 'Control Center', icon: require('../assets/icons/icon-control-center.svg'), separator:['interitem']},
-                {type: 'disclosure', title: 'Do Not Disturb', icon: require('../assets/icons/icon-dnd.svg'), separator:['bottom']},
-                {type: 'space', height: 35},
+                [
+                    {type: 'account', height: 80, title: 'Stanislau Baranouski', subtitle: 'Apple ID, iCloud, iTunes & App Store', avatarUrl: 'https://i.ibb.co/SwdrRjG/Screen-Shot-2019-05-30-at-16-59-01.png'},
+                ],
+                [
+                    {type: 'switch', title:'Airplane Mode', isOn:false, toggleHandler:(this.toggleAirplaneMode), icon: require('../assets/icons/icon-airplane-mode.svg')},
+                    {type: 'disclosure', title:'Wi-Fi', rightText: 'Oozou', icon: require('../assets/icons/icon-wifi.svg')},
+                    {type: 'disclosure', title:'Bluetooth', rightText: 'On', icon: require('../assets/icons/icon-bluetooth.png')},
+                    {type: 'disclosure', title: 'Mobile Data', icon: require('../assets/icons/icon-mobiledata.svg')},
+                    {type: 'disclosure', title: 'Personal Hotspot', rightText: 'Off', icon: require('../assets/icons/icon-hotspot.svg')},
+                    {type: 'disclosure', title: 'VPN', rightText: 'Not Connected', icon: require('../assets/icons/icon-vpn.svg')},
+                ],
+                [
+                    {type: 'disclosure', title: 'Notifications', icon: require('../assets/icons/icon-notifications.svg')},
+                    {type: 'disclosure', title: 'Control Center', icon: require('../assets/icons/icon-control-center.svg')},
+                    {type: 'disclosure', title: 'Do Not Disturb', icon: require('../assets/icons/icon-dnd.svg')},
+                ],
             ],
         };
     }
@@ -68,6 +68,21 @@ export default class SettingsScreen extends Component {
         this.setState({items: newItems});
     };
 
+    render() {
+        const processedItems = this.processItems(this.state.items)
+        return (
+            <View style={styles.container}>
+                <NavBarTitle />
+                <FlatList
+                data={processedItems}
+                showsVerticalScrollIndicator={true}
+                renderItem={(item) => this.renderItem(item.item)}
+                keyExtractor={(item, index) => index.toString()}
+                />
+            </View>
+        )
+    }
+
     renderItem = (item) => {
         return (
             <View style={{backgroundColor: GlobalStyle.colors.white}}>
@@ -76,17 +91,35 @@ export default class SettingsScreen extends Component {
         )
     }
 
-    render() {
-        return (
-            <View style={styles.container}>
-                <NavBarTitle />
-                <FlatList
-                data={this.state.items}
-                showsVerticalScrollIndicator={true}
-                renderItem={(item) => this.renderItem(item.item)}
-                keyExtractor={(item, index) => index.toString()}
-                />
-            </View>
-        )
+    processItems(items) {
+        // intention of this func: to flatten 2d input array and inject spaces and separator lines between items
+
+        const processedItems = []
+        for (let i=0; i<items.length; i++) {
+            // add space 35 points above each group of items
+            processedItems.push({type: 'space', height: 35})
+
+            // add separator at the beginning of the group
+            processedItems.push({type: 'separator'})
+
+            let group = items[i];
+            for (let j=0; j<group.length; j++) {
+                let item = group[j];
+                processedItems.push(item)
+
+                // add separator with padding for the icon withing sgroup items
+                if (j < group.length-1) {
+                    processedItems.push({type: 'separator-interitem'})
+                }
+            }
+
+            // add separator at the end of the group
+            processedItems.push({type: 'separator'})
+        }
+
+        // add space 35 points in the end of the list
+        processedItems.push({type: 'space', height: 35})
+
+        return processedItems
     }
 };
