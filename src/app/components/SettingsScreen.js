@@ -24,9 +24,13 @@ class SettingsItemContainer extends Component {
     }
 
     render()  {
+        const separators = this.props.item.separator ?? [];
         return (
             <View>
+                {separators.includes('top') ? <SeparatorLine /> : null}
                 {this.renderItem(this.props.item)}
+                {separators.includes('interitem') ? <SeparatorLine margin={50}/> : null}
+                {separators.includes('bottom') ? <SeparatorLine/> : null}
             </View>
         );
     }
@@ -40,31 +44,18 @@ export default class SettingsScreen extends Component {
         this.state = {
             items: [
                 {type: 'space', height: 35, isTop: false},
-                {type: 'separator'},
-                {type: 'account', height: 80, title: 'Stanislau Baranouski', subtitle: 'Apple ID, iCloud, iTunes & App Store', avatarUrl: 'https://i.ibb.co/SwdrRjG/Screen-Shot-2019-05-30-at-16-59-01.png'},
-                {type: 'separator'},
+                {type: 'account', height: 80, title: 'Stanislau Baranouski', subtitle: 'Apple ID, iCloud, iTunes & App Store', avatarUrl: 'https://i.ibb.co/SwdrRjG/Screen-Shot-2019-05-30-at-16-59-01.png', separator:['top', 'bottom']},
                 {type: 'space', height: 36},
-                {type: 'separator'},
-                {type: 'switch', title:'Airplane Mode', isOn:false, toggleHandler:(this.toggleAirplaneMode), icon: require('../assets/icons/icon-airplane-mode.svg')},
-                {type: 'separator', isIcon:'true'},
-                {type: 'disclosure', title:'Wi-Fi', rightText: 'Oozou', icon: require('../assets/icons/icon-wifi.svg')},
-                {type: 'separator', isIcon:'true'},
-                {type: 'disclosure', title:'Bluetooth', rightText: 'On', icon: require('../assets/icons/icon-bluetooth.png')},
-                {type: 'separator', isIcon:'true'},
-                {type: 'disclosure', title: 'Mobile Data', icon: require('../assets/icons/icon-mobiledata.svg')},
-                {type: 'separator', isIcon:'true'},
-                {type: 'disclosure', title: 'Personal Hotspot', rightText: 'Off', icon: require('../assets/icons/icon-hotspot.svg')},
-                {type: 'separator', isIcon:'true'},
-                {type: 'disclosure', title: 'VPN', rightText: 'Not Connected', icon: require('../assets/icons/icon-vpn.svg')},
-                {type: 'separator'},
-                {type: 'space', height: 36},
-                {type: 'separator'},
-                {type: 'disclosure', title: 'Notifications', icon: require('../assets/icons/icon-notifications.svg')},
-                {type: 'separator', isIcon:'true'},
-                {type: 'disclosure', title: 'Control Center', icon: require('../assets/icons/icon-control-center.svg')},
-                {type: 'separator', isIcon:'true'},
-                {type: 'disclosure', title: 'Do Not Disturb', icon: require('../assets/icons/icon-dnd.svg')},
-                {type: 'separator'},
+                {type: 'switch', title:'Airplane Mode', isOn:false, toggleHandler:(this.toggleAirplaneMode), icon: require('../assets/icons/icon-airplane-mode.svg'), separator:['top', 'interitem']},
+                {type: 'disclosure', title:'Wi-Fi', rightText: 'Oozou', icon: require('../assets/icons/icon-wifi.svg'), separator:['interitem']},
+                {type: 'disclosure', title:'Bluetooth', rightText: 'On', icon: require('../assets/icons/icon-bluetooth.png'), separator:['interitem']},
+                {type: 'disclosure', title: 'Mobile Data', icon: require('../assets/icons/icon-mobiledata.svg'), separator:['interitem']},
+                {type: 'disclosure', title: 'Personal Hotspot', rightText: 'Off', icon: require('../assets/icons/icon-hotspot.svg'), separator:['interitem']},
+                {type: 'disclosure', title: 'VPN', rightText: 'Not Connected', icon: require('../assets/icons/icon-vpn.svg'), separator:['bottom']},
+                {type: 'space', height: 35},
+                {type: 'disclosure', title: 'Notifications', icon: require('../assets/icons/icon-notifications.svg'), separator:['top', 'interitem']},
+                {type: 'disclosure', title: 'Control Center', icon: require('../assets/icons/icon-control-center.svg'), separator:['interitem']},
+                {type: 'disclosure', title: 'Do Not Disturb', icon: require('../assets/icons/icon-dnd.svg'), separator:['bottom']},
                 {type: 'space', height: 35},
             ],
         };
