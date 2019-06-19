@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 export const GlobalVars = {
     text: {
@@ -82,24 +82,14 @@ export const styles = StyleSheet.create({
         alignItems: 'stretch',
         backgroundColor: GlobalStyle.colors.containerBackground,
     },
-    navBar: {
-        height: 84,
-        marginTop: 60,
-        flexDirection: 'row',
-        alignItems: 'center',
-        backgroundColor: GlobalStyle.colors.headerBg,
-    },
     headerContainer: {
         height: 60,
         alignItems: 'center',
     },
-    leftContainer: {
-        flex: 1,
-        flexDirection: 'row',
-        marginLeft: GlobalStyle.itemMarginLeft,
-    },
     header: {
-        marginTop: 10,
+        marginTop: Platform.OS === 'ios' ? 54 : 15,
+        marginLeft: 15,
+        marginBottom: 10,
         fontFamily: 'Helvetica',
         fontSize: 36,
         fontWeight: 'bold',

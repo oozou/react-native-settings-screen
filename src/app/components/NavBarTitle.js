@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Platform } from 'react-native';
 import { styles, GlobalVars, GlobalStyle } from './SettingsStyles';
 
 export class SeparatorLine extends Component {
@@ -17,14 +17,11 @@ export class SeparatorLine extends Component {
 
 export default class NavBarTitle extends Component {
     render() {
+        const separator = Platform.OS === 'ios' ? <SeparatorLine /> : null;
         return (
             <View>
-                <View style={styles.navBar}>
-                    <View style={styles.leftContainer}>
-                        <Text style={styles.header}>{GlobalVars.text.header}</Text>
-                    </View>
-                </View>
-                <SeparatorLine />
+                <Text style={[styles.header]}>{GlobalVars.text.header}</Text>
+                {separator}
             </View>
         )
     }

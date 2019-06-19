@@ -51,6 +51,7 @@ export default class SettingsScreen extends Component {
                     {type: 'disclosure', title: 'Mobile Data', subtitle: 'mobile, data usage', icon: require('../assets/icons/icon-mobiledata.svg')},
                     {type: 'disclosure', title: 'Personal Hotspot', infoText: 'Off', icon: require('../assets/icons/icon-hotspot.svg')},
                     {type: 'disclosure', title: 'VPN', infoText: 'Not Connected', icon: require('../assets/icons/icon-vpn.svg')},
+                    {type: 'switch', title:'Vacation mode', isOn:true, toggleHandler:(this.toggleAirplaneMode), icon: require('../assets/icons/icon-airplane-mode.svg')},
                 ],
                 [
                     {type: 'disclosure', title: 'Notifications', subtitle: 'Permissions, default apps', icon: require('../assets/icons/icon-notifications.svg')},
