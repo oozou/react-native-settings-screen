@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, FlatList } from 'react-native';
+import { View, Text, FlatList, Platform } from 'react-native';
 import { itemStyles, styles, GlobalStyle } from './SettingsStyles';
 import { SpaceItem, AccountItem, DisclosureItem, SwitchItem } from './items';
 import NavBarTitle, { SeparatorLine } from './NavBarTitle';
@@ -46,14 +46,14 @@ export default class SettingsScreen extends Component {
                 ],
                 [
                     {type: 'switch', title:'Airplane Mode', isOn:false, toggleHandler:(this.toggleAirplaneMode), icon: require('../assets/icons/icon-airplane-mode.svg')},
-                    {type: 'disclosure', title:'Wi-Fi', rightText: 'Oozou', icon: require('../assets/icons/icon-wifi.svg')},
-                    {type: 'disclosure', title:'Bluetooth', rightText: 'On', icon: require('../assets/icons/icon-bluetooth.png')},
-                    {type: 'disclosure', title: 'Mobile Data', icon: require('../assets/icons/icon-mobiledata.svg')},
-                    {type: 'disclosure', title: 'Personal Hotspot', rightText: 'Off', icon: require('../assets/icons/icon-hotspot.svg')},
-                    {type: 'disclosure', title: 'VPN', rightText: 'Not Connected', icon: require('../assets/icons/icon-vpn.svg')},
+                    {type: 'disclosure', title:'Wi-Fi', subtitle: 'Wi-Fi, mobile, data usage', infoText: 'Oozou', icon: require('../assets/icons/icon-wifi.svg')},
+                    {type: 'disclosure', title:'Bluetooth', subtitle: 'Bluethooth, driving mode, NFC', infoText: 'On', icon: require('../assets/icons/icon-bluetooth.png')},
+                    {type: 'disclosure', title: 'Mobile Data', subtitle: 'mobile, data usage', icon: require('../assets/icons/icon-mobiledata.svg')},
+                    {type: 'disclosure', title: 'Personal Hotspot', infoText: 'Off', icon: require('../assets/icons/icon-hotspot.svg')},
+                    {type: 'disclosure', title: 'VPN', infoText: 'Not Connected', icon: require('../assets/icons/icon-vpn.svg')},
                 ],
                 [
-                    {type: 'disclosure', title: 'Notifications', icon: require('../assets/icons/icon-notifications.svg')},
+                    {type: 'disclosure', title: 'Notifications', subtitle: 'Permissions, default apps', icon: require('../assets/icons/icon-notifications.svg')},
                     {type: 'disclosure', title: 'Control Center', icon: require('../assets/icons/icon-control-center.svg')},
                     {type: 'disclosure', title: 'Do Not Disturb', icon: require('../assets/icons/icon-dnd.svg')},
                 ],
@@ -92,6 +92,29 @@ export default class SettingsScreen extends Component {
     }
 
     processItems(items) {
+        if (Platform.OS === 'ios') {
+            return this.processItems_iOS(items)
+        } else if (Platform.OS === 'android') {
+            return this.processItems_android(items)
+        } else {
+            return []
+        }
+        
+    }
+
+    processItems_android(items) {
+        const processedItems = []
+        for (let i=0; i<items.length; i++) {
+            let group = items[i];
+            for (let j=0; j<group.length; j++) {
+                let item = group[j];
+                processedItems.push(item)
+            }
+        }
+        return processedItems
+    }
+
+    processItems_iOS(items) {
         // intention of this func: to flatten 2d input array and inject spaces and separator lines between items
 
         const processedItems = []

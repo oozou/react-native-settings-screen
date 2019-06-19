@@ -65,6 +65,12 @@ export const itemStyles = StyleSheet.create({
         fontFamily: 'SFProText-Regular',
         fontSize: 17,
     },
+    icon: {
+        borderRadius: 16,
+        width: 32,
+        height: 32,
+        resizeMode: 'cover'
+    },
 });
 
 export const styles = StyleSheet.create({

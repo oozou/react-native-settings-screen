@@ -1,12 +1,44 @@
 import React, { Component } from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, Platform } from 'react-native';
 import { itemStyles, GlobalStyle } from '../SettingsStyles';
 import { Avatar, ListItem, Icon } from 'react-native-elements';
 
-export default class DisclosureItem extends Component {
+class DisclosureItemAndroid extends Component {
     render() {
-        const rightText = this.props.item.rightText ? this.props.item.rightText : "";
-        const showRightText = rightText.length > 0;
+        const subtitle = this.props.item.infoText ? this.props.item.infoText : (this.props.item.subtitle ?? "")
+        const showSubtitle = subtitle.length > 0;
+
+        return (
+            <ListItem
+            style={{height: 64}}
+            leftElement={
+                <View style={itemStyles.icon}>
+                <Image
+                source={this.props.item.icon}
+                style={itemStyles.icon}
+                />
+                </View>
+            }
+            title={
+                <Text style={[itemStyles.title]}>{this.props.item.title}</Text>
+            }
+            subtitle={
+                <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                    {showSubtitle
+                        ? <Text style={itemStyles.disclosureText}>{subtitle}</Text>
+                        : null
+                    }
+                </View>
+            }
+            />
+        )
+    }
+};
+
+class DisclosureItemIOS extends Component {
+    render() {
+        const infoText = this.props.item.infoText ? this.props.item.infoText : "";
+        const showInfoText = infoText.length > 0;
         return (
             <ListItem
             leftElement={
@@ -22,8 +54,8 @@ export default class DisclosureItem extends Component {
             }
             rightElement={
                 <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                    {showRightText
-                        ? <Text style={itemStyles.disclosureText}>{rightText}</Text>
+                    {showInfoText
+                        ? <Text style={itemStyles.disclosureText}>{infoText}</Text>
                         : null
                     }
                 <Icon
@@ -39,3 +71,15 @@ export default class DisclosureItem extends Component {
         )
     }
 };
+
+export default class DisclosureItem extends Component {
+    render() {
+        if (Platform.OS === 'ios') {
+            return <DisclosureItemIOS item={this.props.item}/>
+        } else if (Platform.OS === 'android') {
+            return <DisclosureItemAndroid item={this.props.item}/>
+        } else {
+            return (<Text>not supported platform</Text>)
+        }
+    }
+}
